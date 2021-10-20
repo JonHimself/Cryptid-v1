@@ -1,0 +1,70 @@
+#registerBtn {
+  background-color: rgb(88, 65, 216);
+  border: none;
+  width: 6rem;
+  align-self: center;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+}
+
+.signUp > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signUp .ant-input {
+  width: 28rem;
+}
+
+.signUpOffer {
+  margin-top: 3rem;
+  align-self: center;
+}
+.signUpOffer.dark {
+  margin-top: 3rem;
+  align-self: center;
+  color: white;
+}
+
+.signUpTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.signUpTitle.dark {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .signUp > div {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .signUp > div {
+    flex-direction: row;
+  }
+}
+
+.signUp.dark .ant-form-item-label > label {
+  color: white !important;
+}
+
+.signUp.dark .ant-input {
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+.signUp.dark .ant-input:active {
+  background-color: rgb(31, 31, 31);
+  color: white;
+}

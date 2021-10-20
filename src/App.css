@@ -1,0 +1,619 @@
+:root {
+  --text-primary: #000;
+  --bgPrimary: #fff;
+  --bgSecondary: #f9f9f9;
+  --pink: #0071bd;
+  --light-blue: #e6f7ff;
+  --border: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: rgb(88, 65, 216) !important;
+}
+
+a:hover {
+  color: rgb(135, 60, 255) !important;
+}
+
+.ant-menu.dark .ant-menu-item-selected {
+  background-color: rgba(0, 0, 0, 0.349) !important;
+}
+
+.ant-menu.dark .ant-menu-item-active {
+  background-color: rgba(0, 0, 0, 0.137);
+}
+
+.app {
+  display: flex;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ant-layout {
+  display: flex;
+}
+
+.navbar {
+  flex: 0.2;
+}
+
+.topOptions {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 1rem 0;
+}
+
+.main {
+  flex: 0.8;
+  width: 100%;
+}
+.routes {
+  padding: 20px;
+}
+.nav-container {
+  position: fixed;
+  left: 0;
+  margin: 10px;
+  height: 100vh;
+  margin: 0px;
+}
+
+.logo-container {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  margin: 0 0 0 15px;
+}
+.logo a {
+  color: white;
+}
+
+.menu-control-container {
+  display: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 25px !important;
+  font-size: 1.2rem !important;
+  background-color: var(--bgSecondary) !important;
+  border: none !important;
+}
+
+.loader {
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .main {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .main {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+
+  .main {
+    flex: 1;
+    margin-top: 90px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  .nav-container {
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--bgSecondary);
+  }
+
+  .menu-control-container {
+    display: block !important;
+  }
+
+  .ant-menu {
+    position: absolute;
+    right: 0px;
+  }
+  .home-title {
+    font-size: 1.4rem !important;
+  }
+  .show-more {
+    font-size: 1.3rem !important;
+  }
+}
+
+div.ant-card-head {
+  background-color: rgb(88, 65, 216);
+  color: white;
+}
+div.ant-card {
+  border: none;
+}
+
+.coin-detail-container {
+  margin: 30px;
+}
+
+.coin-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.coin-heading-container .coin-name {
+  font-weight: 900;
+  color: var(--pink);
+}
+
+.coin-heading-container p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.stats-container h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: var(--pink);
+}
+
+.coin-details-heading {
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--pink) !important;
+}
+
+.coin-stats {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+  opacity: 0.9;
+  padding: 20px;
+}
+
+.coin-stats-name {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.stats {
+  font-weight: 800;
+}
+
+.coin-value-statistics-heading p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin-desc-link {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.coin-desc-link h2 {
+  font-weight: 700;
+  color: var(--pink);
+}
+
+.coin-desc-link p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin-desc-link a {
+  color: var(--pink);
+}
+
+.coin-desc-link h3 {
+  font-weight: 700;
+}
+
+.coin-desc {
+  flex: 0.5;
+}
+
+.coin-links {
+  padding: 0px 20px;
+  flex: 0.5;
+}
+
+.coin-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.link-name {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.coin-link a {
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.coin-link:hover,
+.coin-stats:hover {
+  background-color: var(--bgSecondary);
+}
+
+@media screen and (max-width: 1000px) {
+  .stats-container {
+    flex-direction: column;
+  }
+  .coin-desc-link {
+    flex-direction: column;
+  }
+  .stats-container h2 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .coin-links {
+    padding: 0px;
+  }
+  .coin-detail-container {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    margin-top: 20px;
+  }
+}
+
+.select-news {
+  width: 180px;
+}
+
+.news-card {
+  min-height: 300px !important;
+}
+.news-image-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.news-title {
+  width: 70%;
+}
+
+.news-image-container .img {
+  width: 100px;
+  height: 100px;
+}
+.news-card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+.provider-container {
+  display: flex;
+  justify-content: space-between;
+}
+.provider-name {
+  margin-left: 10px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+}
+.chart-title {
+  color: #0071bd !important;
+}
+.price-container {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.price-change {
+  font-weight: 900 !important;
+}
+.current-price {
+  margin-top: 0px !important;
+  font-weight: 900 !important;
+}
+.home-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.show-more {
+  margin-top: 0px !important;
+}
+.exchange-image {
+  margin: 0px 10px !important;
+}
+.search-crypto {
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+.crypto-card-container {
+  min-height: 65vh !important;
+}
+.crypto-card {
+  min-width: 250px;
+}
+.crypto-card .crypto-image {
+  width: 35px;
+}
+.select-timeperiod {
+  width: 200px !important;
+  margin-top: 20px !important;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+ul.ant-menu-vertical {
+  border: none;
+}
+
+/* DARK MODE */
+
+.price-container.dark h5 {
+  color: white !important;
+}
+
+.coin-desc.dark h3 {
+  color: rgb(0, 113, 189);
+}
+
+.coin-desc.dark p {
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.coin-link.dark > h5 {
+  color: white;
+}
+
+.coin-link.dark:hover,
+.coin-stats.dark:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+.darkTypo {
+  color: white !important;
+}
+
+.darkColl {
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+
+.darkColl > h3 {
+  background-color: rgb(31, 31, 31);
+  color: rgb(88, 65, 216);
+}
+.darkColl > h2 {
+  background-color: rgb(31, 31, 31);
+  color: rgb(88, 65, 216);
+}
+
+.app.dark {
+  display: flex;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(31, 31, 31);
+  color: rgb(88, 65, 216);
+}
+
+.navbar.dark {
+  background-color: rgb(31, 31, 31);
+  flex: 0.2;
+}
+
+.ant-layout.dark {
+  display: flex;
+  background-color: rgb(18, 18, 18);
+}
+
+.ant-menu-item a.dark {
+  background-color: rgb(31, 31, 31);
+  color: rgb(88, 65, 216);
+}
+
+.ant-menu-item.dark {
+  color: rgb(88, 65, 216);
+}
+
+.ant-menu.dark {
+  background-color: rgb(31, 31, 31);
+}
+
+.ant-notification-notice.dark .ant-notification-notice-message {
+  color: white !important;
+}
+.ant-notification-notice.dark {
+  color: white !important;
+  background-color: rgb(31, 31, 31);
+  border: 1px solid rgb(88, 65, 216);
+}
+
+div.ant-card-body.dark {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+div.ant-card.dark {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+div.ant-card.dark {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+#darkBody {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+.footer.dark {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: rgb(31, 31, 31);
+}
+
+.heading {
+  color: rgb(88, 65, 216) !important;
+}
+.home-title {
+  color: rgb(88, 65, 216) !important;
+}
+
+#dark {
+  font-size: 1rem;
+  color: rgb(88, 65, 216);
+}
+
+#dark-menu {
+  font-size: 1rem;
+  color: rgb(88, 65, 216);
+}
+
+#dark-number {
+  color: rgb(88, 65, 216);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.ant-modal.dark .ant-modal-content {
+  background-color: rgb(31, 31, 31) !important;
+}
+.ant-modal.dark .ant-input-affix-wrapper {
+  background-color: rgb(31, 31, 31) !important;
+}
+.ant-modal.dark input {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+.ant-modal.dark .ant-modal-header {
+  background-color: rgb(31, 31, 31) !important;
+  border: none;
+}
+.ant-modal.dark .ant-modal-footer {
+  border: none;
+}
+
+.ant-modal.dark .ant-modal-title {
+  color: white !important;
+}
+.ant-modal.dark span {
+  color: white !important;
+}
+
+/* LOGIN TEXT */
+.ant-modal.dark .ant-form-item-control-input-content {
+  color: white !important;
+}
+
+.ant-modal.dark .login-form-button {
+  background-color: rgb(88, 65, 216) !important;
+  border: none;
+}
+
+div.ant-form-item-control-input-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+div.ant-form-item-control-input-content button {
+  margin-right: 1rem;
+}
+div.ant-form-item-control-input-content a {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.darkDrop {
+  background-color: rgb(31, 31, 31) !important;
+}
+
+.darkDrop div {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+.darkDrop span {
+  color: white !important;
+}
+
+.ant-select.dark .ant-select-selector {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
+
+.ant-select.dark .ant-select-arrow {
+  color: white !important;
+}
+
+.darkInput {
+  background-color: rgb(31, 31, 31) !important;
+  color: white !important;
+}
