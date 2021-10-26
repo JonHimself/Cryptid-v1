@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema(
       required: true,
       default: false,
     },
+    versionKey: {
+      type: Number,
+      select: false,
+    },
   },
   {
     timestamps: true,
