@@ -36,7 +36,7 @@ const Homepage = ({darkTheme}) => {
                 <div id='dark-number'>{millify(globalStats.total24hVolume)}</div>
             </Col>
             <Col span={12}>
-                <div id='dark'>Total Markets</div>
+                <div id='dark'>Total Markets...</div>
                 <div id='dark-number'>{millify(globalStats.totalMarkets)}</div>
             </Col>
         </Row>
