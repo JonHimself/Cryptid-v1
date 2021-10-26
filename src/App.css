@@ -409,7 +409,15 @@ ul.ant-menu-vertical {
   border: none;
 }
 
+#registerBtn {
+  margin-top: 10px;
+}
+
 /* DARK MODE */
+
+body.dark {
+  background-color: rgb(31, 31, 31);
+}
 
 .price-container.dark h5 {
   color: white !important;

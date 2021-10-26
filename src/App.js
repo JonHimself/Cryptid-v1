@@ -15,6 +15,7 @@ import {
   Signup,
 } from "./components";
 import "./App.css";
+let body = document.querySelector("body");
 
 const App = ({ darkTheme, dark, light }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -33,6 +34,9 @@ const App = ({ darkTheme, dark, light }) => {
   const handleTheme = () => {
     setChecked(!checked);
     darkTheme === false ? dark() : light();
+    darkTheme === false
+      ? body.classList.add("dark")
+      : body.classList.remove("dark");
   };
 
   return (

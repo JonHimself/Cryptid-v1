@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Loader from '../components/Loader'
 import { connect } from "react-redux";
 import { Select, Typography, Row, Col, Card, Avatar} from 'antd';

@@ -91,7 +91,14 @@ const Signup = ({darkTheme}) => {
             <Form.Item label='E-mail:' name='email' hasFeedback rules={[{type: "email", message: "Please enter a valid email"},{required: true, message: 'Your e-mails do not match'}]}>
             <Input  />
             </Form.Item>
-            <Form.Item label='Confirm E-mail:' name='confirmE' hasFeedback rules={[{type: "email", message: "Please enter a valid email"},{required: true, message: 'E-mails do not match'}]}>
+            <Form.Item label='Confirm E-mail:' name='confirmE' hasFeedback dependencies={["email"]} rules={[{type: "email", message: "Please enter a valid email"}, ({getFieldValue}) => ({
+                validator(_, value){
+                    if(!value || getFieldValue("email") === value){
+                        return Promise.resolve()
+                    }
+                    return Promise.reject("Your emails do not match")
+                }
+            })]}>
             <Input />
             </Form.Item>
             <Form.Item  label='Password:' name='password' hasFeedback rules={[{required: true, message: 'Please choose a password'}]}>
