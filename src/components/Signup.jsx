@@ -83,13 +83,13 @@ const Signup = ({darkTheme}) => {
         <p className={`signUpTitle ${darkTheme === true ? 'dark' : ''}`}>Sign-Up!</p>
         <Form layout='horizontal' className={`signUp ${darkTheme === true ? 'dark' : ''}`} {...formItemLayout} name="basic" initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed}>
             <Form.Item style={{color: 'white'}} label='Full Name:' name='fullname' rules={[{required: true, message: 'You must have a name . . . right?'}]}>
-            <Input  />
+            <Input  className={darkTheme ? 'dark' : ''}/>
             </Form.Item >
             <Form.Item label='Username:' name='username' rules={[{required: true, message: 'You must choose a Username'}]}>
-            <Input  className='signUpInput'/>
+            <Input  className={`signUpInput ${darkTheme ? 'dark' : ''}` }/>
             </Form.Item>
             <Form.Item label='E-mail:' name='email' hasFeedback rules={[{type: "email", message: "Please enter a valid email"},{required: true, message: 'Your e-mails do not match'}]}>
-            <Input  />
+            <Input  className={darkTheme ? 'dark' : ''} />
             </Form.Item>
             <Form.Item label='Confirm E-mail:' name='confirmE' hasFeedback dependencies={["email"]} rules={[{type: "email", message: "Please enter a valid email"}, ({getFieldValue}) => ({
                 validator(_, value){
@@ -99,10 +99,10 @@ const Signup = ({darkTheme}) => {
                     return Promise.reject("Your emails do not match")
                 }
             })]}>
-            <Input />
+            <Input className={darkTheme ? 'dark' : ''}/>
             </Form.Item>
             <Form.Item  label='Password:' name='password' hasFeedback rules={[{required: true, message: 'Please choose a password'}]}>
-            <Input />
+            <Input className={darkTheme ? 'dark' : ''} />
             </Form.Item>
             <Form.Item  label='Confirm Password:' name='confirmP' hasFeedback dependencies={["password"]} rules={[{required: true, message: 'Please confirm your password'}, ({getFieldValue}) => ({
                 validator(_, value){
@@ -112,7 +112,7 @@ const Signup = ({darkTheme}) => {
                     return Promise.reject("Your passwords do not match")
                 }
             })]}>
-            <Input />
+            <Input className={darkTheme ? 'dark' : ''} />
             </Form.Item>
             <Button id='registerBtn' type="primary" htmlType="submit">
              Sign-Up

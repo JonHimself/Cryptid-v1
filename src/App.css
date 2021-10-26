@@ -548,6 +548,10 @@ div.ant-card.dark {
   padding-bottom: 1rem;
 }
 
+.ant-input.dark {
+  background-color: rgb(31, 31, 31) !important;
+}
+
 .ant-modal.dark .ant-modal-content {
   background-color: rgb(31, 31, 31) !important;
 }
